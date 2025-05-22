@@ -322,7 +322,7 @@ tbody tr:last-child td {
 }
 
 /* Responsividade */
-@media (max-width: 458px) {
+@media (max-width: 658px) {
     header {
         flex-direction: column;
         text-align: center;
@@ -489,7 +489,7 @@ tbody tr:last-child td {
 }
 
 /* Tabela responsiva com scroll horizontal para telas médias */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1024px) {
     table {
         min-width: 700px;
     }

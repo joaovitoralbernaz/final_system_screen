@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="/api/placeholder/200/200" alt="MainLogo" class="MainLogo">
+        <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
         <nav>
             <div class="nav-links">
                 <a href="index.html">Início</a>
@@ -64,7 +64,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="img">
-                <img src="/api/placeholder/100/100" class="ccm" alt="CCM Logo">
+                <img src="img/logoccm.png" class="ccm" alt="CCM Logo">
             </div>
             <div class="footer-section">
                 <h3>Farmasic Pro</h3>
@@ -90,7 +90,7 @@
                 <a href="#">Termos de Uso</a>
             </div>
             <div class="img">
-                <img src="/api/placeholder/100/100" class="estado" alt="Estado Logo">
+                <img src="img/logoestado.png" class="estado" alt="Estado Logo">
             </div>
         </div>
         
@@ -100,45 +100,6 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const hamburger = document.querySelector('.hamburger');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.overlay');
-            
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-            
-            // Previne o scroll do body quando o menu está aberto
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-        }
-        
-        function closeMenu() {
-            const hamburger = document.querySelector('.hamburger');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.overlay');
-            
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Fecha o menu quando a tela é redimensionada para desktop
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
-        });
-        
-        // Fecha o menu ao pressionar ESC
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeMenu();
-            }
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
