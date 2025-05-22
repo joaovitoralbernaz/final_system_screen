@@ -21,92 +21,97 @@
         </nav>
     </header>
 
-    <div class="container">
-        <div class="main-content">
-            <a href="index.html" class="back-btn">← Voltar</a>
-            <h1 class="page-title">Cadastro de Fornecedores</h1>
-            
-            <div class="form-container">
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="fornecedor-nome">Nome da Empresa</label>
-                        <input type="text" id="fornecedor-nome" name="fornecedor-nome" placeholder="Digite o nome da empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fornecedor-cnpj">CNPJ</label>
-                        <input type="text" id="fornecedor-cnpj" name="fornecedor-cnpj" placeholder="00.000.000/0000-00" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fornecedor-telefone">Telefone</label>
-                        <input type="text" id="fornecedor-telefone" name="fornecedor-telefone" placeholder="(00) 0000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="fornecedor-email">E-mail</label>
-                        <input type="email" id="fornecedor-email" name="fornecedor-email" placeholder="empresa@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="fornecedor-endereco">Endereço</label>
-                        <input type="text" id="fornecedor-endereco" name="fornecedor-endereco" placeholder="Rua, número, bairro">
-                    </div>
-                    <div class="form-group">
-                        <label for="fornecedor-contato">Nome do Contato</label>
-                        <input type="text" id="fornecedor-contato" name="fornecedor-contato" placeholder="Nome do representante">
-                    </div>
-                    <div class="btn-group">
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                        <button type="reset" class="btn btn-secondary">Limpar</button>
-                    </div>
-                </form>
-            </div>
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <a href="index.html" class="back-btn">← Voltar</a>
+                <h1 class="page-title">Cadastro de Fornecedores</h1>
+                
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="fornecedor-nome">Nome da Empresa</label>
+                            <input type="text" id="fornecedor-nome" name="fornecedor-nome" placeholder="Digite o nome da empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor-cnpj">CNPJ</label>
+                            <input type="text" id="fornecedor-cnpj" name="fornecedor-cnpj" placeholder="00.000.000/0000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor-telefone">Telefone</label>
+                            <input type="text" id="fornecedor-telefone" name="fornecedor-telefone" placeholder="(00) 0000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor-email">E-mail</label>
+                            <input type="email" id="fornecedor-email" name="fornecedor-email" placeholder="empresa@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor-endereco">Endereço</label>
+                            <input type="text" id="fornecedor-endereco" name="fornecedor-endereco" placeholder="Rua, número, bairro">
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor-contato">Nome do Contato</label>
+                            <input type="text" id="fornecedor-contato" name="fornecedor-contato" placeholder="Nome do representante">
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="reset" class="btn btn-secondary">Limpar</button>
+                        </div>
+                    </form>
+                </div>
 
-            <div class="search-container">
-                <form action="#" method="get">
-                    <input type="text" id="buscar-fornecedor" name="buscar-fornecedor" class="search-input" placeholder="Buscar fornecedor...">
-                    <button type="submit" class="search-btn">Buscar</button>
-                </form>
-            </div>
+                <div class="search-container">
+                    <form action="#" method="get">
+                        <input type="text" id="buscar-fornecedor" name="buscar-fornecedor" class="search-input" placeholder="Buscar fornecedor...">
+                        <button type="submit" class="search-btn">Buscar</button>
+                    </form>
+                </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>CNPJ</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>Contato</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>MedFarma Distribuidora</td>
-                        <td>12.345.678/0001-90</td>
-                        <td>(11) 3333-4444</td>
-                        <td>contato@medfarma.com</td>
-                        <td>Carlos Silva</td>
-                        <td class="action-btns">
-                            <a href="#" class="edit-btn">Editar</a>
-                            <a href="#" class="delete-btn">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pharma Supply</td>
-                        <td>98.765.432/0001-10</td>
-                        <td>(11) 4444-5555</td>
-                        <td>contato@pharmasupply.com</td>
-                        <td>Ana Oliveira</td>
-                        <td class="action-btns">
-                            <a href="#" class="edit-btn">Editar</a>
-                            <a href="#" class="delete-btn">Excluir</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CNPJ</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Contato</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">1</td>
+                                <td data-label="Nome">MedFarma Distribuidora</td>
+                                <td data-label="CNPJ">12.345.678/0001-90</td>
+                                <td data-label="Telefone">(11) 3333-4444</td>
+                                <td data-label="Email">contato@medfarma.com</td>
+                                <td data-label="Contato">Carlos Silva</td>
+                                <td data-label="Ações" class="action-btns">
+                                    <a href="#" class="edit-btn">Editar</a>
+                                    <a href="#" class="delete-btn">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">2</td>
+                                <td data-label="Nome">Pharma Supply</td>
+                                <td data-label="CNPJ">98.765.432/0001-10</td>
+                                <td data-label="Telefone">(11) 4444-5555</td>
+                                <td data-label="Email">contato@pharmasupply.com</td>
+                                <td data-label="Contato">Ana Oliveira</td>
+                                <td data-label="Ações" class="action-btns">
+                                    <a href="#" class="edit-btn">Editar</a>
+                                    <a href="#" class="delete-btn">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    
     <footer class="footer_cad">
         <p>&copy; 2025 - Sistema de Estoque de Farmácia</p>
         <address>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Cadastro de Funcionários - Sistema de Estoque de Farmácia</title>
     <link rel="stylesheet" href="css/cadastro.css">
-    <title>Cadastro de Funcionário - Sistema de Estoque Farmácia</title>
 </head>
 <body>
     <header>
@@ -25,29 +25,44 @@
         <div class="container">
             <div class="main-content">
                 <a href="index.html" class="back-btn">← Voltar</a>
-                <h1 class="page-title">Cadastro de funiconarios</h1>
+                <h1 class="page-title">Cadastro de Funcionários</h1>
                 
                 <div class="form-container">
                     <form action="#" method="post">
                         <div class="form-group">
-                            <label for="funiconario-nome">Nome Completo</label>
-                            <input type="text" id="funiconario-nome" name="funiconario-nome" placeholder="Digite o nome completo" required>
+                            <label for="funcionario-nome">Nome Completo</label>
+                            <input type="text" id="funcionario-nome" name="funcionario-nome" placeholder="Digite o nome completo" required>
                         </div>
                         <div class="form-group">
-                            <label for="funiconario-cpf">CPF</label>
-                            <input type="text" id="funiconario-cpf" name="funiconario-cpf" placeholder="000.000.000-00" required>
+                            <label for="funcionario-cpf">CPF</label>
+                            <input type="text" id="funcionario-cpf" name="funcionario-cpf" placeholder="000.000.000-00" required>
                         </div>
                         <div class="form-group">
-                            <label for="funiconario-telefone">Telefone</label>
-                            <input type="text" id="funiconario-telefone" name="funiconario-telefone" placeholder="(00) 00000-0000">
+                            <label for="funcionario-telefone">Telefone</label>
+                            <input type="text" id="funcionario-telefone" name="funcionario-telefone" placeholder="(00) 00000-0000">
                         </div>
                         <div class="form-group">
-                            <label for="funiconario-email">E-mail</label>
-                            <input type="email" id="funiconario-email" name="funiconario-email" placeholder="exemplo@email.com">
+                            <label for="funcionario-email">E-mail</label>
+                            <input type="email" id="funcionario-email" name="funcionario-email" placeholder="exemplo@email.com">
                         </div>
                         <div class="form-group">
-                            <label for="funiconario-endereco">Endereço</label>
-                            <input type="text" id="funiconario-endereco" name="funiconario-endereco" placeholder="Rua, número, bairro">
+                            <label for="funcionario-endereco">Endereço</label>
+                            <input type="text" id="funcionario-endereco" name="funcionario-endereco" placeholder="Rua, número, bairro">
+                        </div>
+                        <div class="form-group">
+                            <label for="funcionario-cargo">Cargo</label>
+                            <select id="funcionario-cargo" name="funcionario-cargo" required>
+                                <option value="">Selecione um cargo</option>
+                                <option value="farmaceutico">Farmacêutico</option>
+                                <option value="auxiliar">Auxiliar de Farmácia</option>
+                                <option value="atendente">Atendente</option>
+                                <option value="gerente">Gerente</option>
+                                <option value="estoquista">Estoquista</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="funcionario-salario">Salário</label>
+                            <input type="number" id="funcionario-salario" name="funcionario-salario" placeholder="0.00" step="0.01" min="0">
                         </div>
                         <div class="btn-group">
                             <button type="submit" class="btn btn-primary">Salvar</button>
@@ -55,53 +70,59 @@
                         </div>
                     </form>
                 </div>
-    
+
                 <div class="search-container">
                     <form action="#" method="get">
-                        <input type="text" id="buscar-funiconario" name="buscar-funiconario" class="search-input" placeholder="Buscar funiconario...">
+                        <input type="text" id="buscar-funcionario" name="buscar-funcionario" class="search-input" placeholder="Buscar funcionário...">
                         <button type="submit" class="search-btn">Buscar</button>
                     </form>
                 </div>
-    
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Telefone</th>
-                            <th>Email</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Maria Silva</td>
-                            <td>123.456.789-00</td>
-                            <td>(11) 99999-8888</td>
-                            <td>maria@email.com</td>
-                            <td class="action-btns">
-                                <a href="#" class="edit-btn">Editar</a>
-                                <a href="#" class="delete-btn">Excluir</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>João Santos</td>
-                            <td>987.654.321-00</td>
-                            <td>(11) 99999-7777</td>
-                            <td>joao@email.com</td>
-                            <td class="action-btns">
-                                <a href="#" class="edit-btn">Editar</a>
-                                <a href="#" class="delete-btn">Excluir</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Cargo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">1</td>
+                                <td data-label="Nome">Maria Silva</td>
+                                <td data-label="CPF">123.456.789-00</td>
+                                <td data-label="Telefone">(11) 99999-8888</td>
+                                <td data-label="Email">maria@email.com</td>
+                                <td data-label="Cargo">Farmacêutica</td>
+                                <td data-label="Ações" class="action-btns">
+                                    <a href="#" class="edit-btn">Editar</a>
+                                    <a href="#" class="delete-btn">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">2</td>
+                                <td data-label="Nome">João Santos</td>
+                                <td data-label="CPF">987.654.321-00</td>
+                                <td data-label="Telefone">(11) 99999-7777</td>
+                                <td data-label="Email">joao@email.com</td>
+                                <td data-label="Cargo">Atendente</td>
+                                <td data-label="Ações" class="action-btns">
+                                    <a href="#" class="edit-btn">Editar</a>
+                                    <a href="#" class="delete-btn">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
+    
     <footer class="footer_cad">
         <p>&copy; 2025 - Sistema de Estoque de Farmácia</p>
         <address>

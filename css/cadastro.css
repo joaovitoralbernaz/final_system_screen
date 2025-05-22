@@ -219,14 +219,18 @@ main {
 }
 
 /* Tabela */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
-    margin: 20px 0;
     background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 th, td {
@@ -268,12 +272,12 @@ tbody tr:last-child td {
 }
 
 .edit-btn {
-    background-color: #28a745;
+    background-color: rgb(62, 62, 255);
     color: white;
 }
 
 .edit-btn:hover {
-    background-color: #218838;
+    background-color: rgb(1, 1, 166);
     transform: translateY(-1px);
 }
 
@@ -318,7 +322,7 @@ tbody tr:last-child td {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 458px) {
     header {
         flex-direction: column;
         text-align: center;
@@ -375,23 +379,71 @@ tbody tr:last-child td {
         width: 100%;
     }
 
-    table {
-        font-size: 0.85rem;
+    /* Tabela responsiva - Layout card para mobile */
+    .table-container {
+        box-shadow: none;
     }
 
-    th, td {
-        padding: 10px 8px;
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        background-color: white;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border: none;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 12px 0 12px 40%;
+        text-align: left;
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 35%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #FC2C2C;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td:last-child {
+        border-bottom: none;
     }
 
     .action-btns {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: flex-start;
+        margin-left: 0;
     }
 
     .edit-btn, .delete-btn {
-        text-align: center;
         font-size: 0.8rem;
-        padding: 8px;
+        padding: 6px 12px;
+        flex: none;
+        text-align: center;
     }
 }
 
@@ -408,11 +460,47 @@ tbody tr:last-child td {
         padding: 15px;
     }
 
-    table {
+    /* Ajustes para telas muito pequenas */
+    td {
+        padding: 10px 0 10px 45%;
+        font-size: 0.9rem;
+    }
+
+    td:before {
+        width: 40%;
         font-size: 0.8rem;
     }
 
+    tr {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 100%;
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+}
+
+/* Tabela responsiva com scroll horizontal para telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    table {
+        min-width: 700px;
+    }
+    
     th, td {
-        padding: 8px 5px;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .edit-btn, .delete-btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 }
