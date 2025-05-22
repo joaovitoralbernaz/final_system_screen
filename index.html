@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Estoque de Farmácia</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Sistema de Estoque de Farmácia</title>
 </head>
 <body>
     <header>
-        <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
+        <img src="/api/placeholder/200/200" alt="MainLogo" class="MainLogo">
         <nav>
-            <div class="logo"></div>
             <div class="nav-links">
                 <a href="index.html">Início</a>
                 <a href="#cadastros">Cadastros</a>
                 <a href="movimento.html">Movimento</a>
                 <a href="relatorio.html">Relatório</a>
             </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
+
+    <div class="overlay" onclick="closeMenu()"></div>
+    <div class="mobile-menu">
+        <a href="index.html" onclick="closeMenu()">Início</a>
+        <a href="#cadastros" onclick="closeMenu()">Cadastros</a>
+        <a href="movimento.html" onclick="closeMenu()">Movimento</a>
+        <a href="relatorio.html" onclick="closeMenu()">Relatório</a>
+    </div>
 
     <div class="container">
         <div class="main-content">
@@ -48,14 +60,13 @@
             </div>
         </div>
     </div>
-     <footer>
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="footer-container">
             <div class="img">
-                <img src="img/logoccm.png" class="ccm">
+                <img src="/api/placeholder/100/100" class="ccm" alt="CCM Logo">
             </div>
             <div class="footer-section">
-                
                 <h3>Farmasic Pro</h3>
                 <div class="version-info">
                     <span>Versão 2.5.3</span>
@@ -79,15 +90,55 @@
                 <a href="#">Termos de Uso</a>
             </div>
             <div class="img">
-                <img src="img/logoestado.png" class="estado">
+                <img src="/api/placeholder/100/100" class="estado" alt="Estado Logo">
             </div>
         </div>
         
         <div class="footer-bottom">
-            
             <p>&copy; 2025 Farmasic Pro - Sistema de Gestão de Estoque Farmacêutico. Todos os direitos reservados.</p>
             <p>Uma solução desenvolvida pela Farmasic Solutions LTDA. CNPJ: 12.345.678/0001-99</p>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Previne o scroll do body quando o menu está aberto
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        }
+        
+        function closeMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Fecha o menu quando a tela é redimensionada para desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+        
+        // Fecha o menu ao pressionar ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
 </body>
 </html>
