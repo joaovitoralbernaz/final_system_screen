@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/movimento.css">
+    <title>Movimento de Estoque - Sistema de Farmácia</title>
+</head>
+<body>
+    <header>
+        <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
+        <nav>
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="index.html">Cadastros</a>
+                <a href="movimento.html">Movimento</a>
+                <a href="relatorio.html">Relatório</a>
+            </div>
+        </nav>
+    </header>
+    </nav>
+    </header>
+
+    
+
+    <main>
+        <section>
+            <h3>Registrar Movimento de Estoque</h3>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados do Movimento</legend>
+                      <a href="index.html" class="back-btn">← Voltar</a>
+                    <div>
+                        <label for="tipo_movimento">Tipo de Movimento:</label>
+                        <select id="tipo_movimento" name="tipo_movimento" required>
+                            <option value="">Selecione</option>
+                            <option value="entrada">Entrada</option>
+                            <option value="saida">Saída</option>
+                            <option value="ajuste">Ajuste de Inventário</option>
+                            <option value="devolucao">Devolução</option>
+                            <option value="perda">Perda/Vencimento</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="data_movimento">Data do Movimento:</label>
+                        <input type="datetime-local" id="data_movimento" name="data_movimento" required>
+                    </div>
+                    
+                    <div>
+                        <label for="responsavel">Responsável:</label>
+                        <select id="responsavel" name="responsavel" required>
+                            <option value="">Selecione um funcionário</option>
+                            <option value="1">João Silva - Farmacêutico</option>
+                            <option value="2">Maria Oliveira - Farmacêutica</option>
+                            <option value="3">Pedro Santos - Estoquista</option>
+                            <option value="4">Ana Souza - Gerente</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="nota_fiscal">Número da Nota Fiscal (para entradas):</label>
+                        <input type="text" id="nota_fiscal" name="nota_fiscal">
+                    </div>
+                    
+                    <div>
+                        <label for="fornecedor">Fornecedor (para entradas):</label>
+                        <select id="fornecedor" name="fornecedor">
+                            <option value="">Selecione um fornecedor</option>
+                            <option value="1">Distribuidora MedPharma</option>
+                            <option value="2">Farmacêutica BioSaúde</option>
+                            <option value="3">Laboratórios Unidos</option>
+                            <option value="4">Importadora Global Farma</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="motivo_saida">Motivo da Saída (para saídas):</label>
+                        <select id="motivo_saida" name="motivo_saida">
+                            <option value="">Selecione o motivo</option>
+                            <option value="venda">Venda</option>
+                            <option value="transferencia">Transferência</option>
+                            <option value="descarte">Descarte</option>
+                            <option value="amostra">Amostra Grátis</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="observacao">Observações:</label>
+                        <input type="text" id="observacao" name="observacao" rows="3" cols="50"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Itens do Movimento</legend>
+                    
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Lote</th>
+                                <th>Validade</th>
+                                <th>Quantidade</th>
+                                <th>Unidade</th>
+                                <th>Valor Unitário</th>
+                                <th>Subtotal</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select name="produto_1" required>
+                                        <option value="">Selecione um produto</option>
+                                        <option value="1">Paracetamol 500mg</option>
+                                        <option value="2">Dipirona 500mg</option>
+                                        <option value="3">Amoxicilina 500mg</option>
+                                        <option value="4">Omeprazol 20mg</option>
+                                        <option value="5">Losartana 50mg</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="lote_1" size="10" required></td>
+                                <td><input type="date" name="validade_1" required></td>
+                                <td><input type="number" name="quantidade_1" min="1" required></td>
+                                <td>
+                                    <select name="unidade_1" required>
+                                        <option value="cx">Caixa</option>
+                                        <option value="un">Unidade</option>
+                                        <option value="amp">Ampola</option>
+                                        <option value="fr">Frasco</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="valor_unitario_1" min="0" step="0.01" required></td>
+                                <td><input type="number" name="subtotal_1" min="0" step="0.01" readonly></td>
+                                <td><button type="button">Remover</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="produto_2">
+                                        <option value="">Selecione um produto</option>
+                                        <option value="1">Paracetamol 500mg</option>
+                                        <option value="2">Dipirona 500mg</option>
+                                        <option value="3">Amoxicilina 500mg</option>
+                                        <option value="4">Omeprazol 20mg</option>
+                                        <option value="5">Losartana 50mg</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="lote_2" size="10"></td>
+                                <td><input type="date" name="validade_2"></td>
+                                <td><input type="number" name="quantidade_2" min="1"></td>
+                                <td>
+                                    <select name="unidade_2">
+                                        <option value="cx">Caixa</option>
+                                        <option value="un">Unidade</option>
+                                        <option value="amp">Ampola</option>
+                                        <option value="fr">Frasco</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="valor_unitario_2" min="0" step="0.01"></td>
+                                <td><input type="number" name="subtotal_2" min="0" step="0.01" readonly></td>
+                                <td><button type="button">Remover</button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="8"><button type="button">Adicionar Item</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" align="right"><strong>Total:</strong></td>
+                                <td><input type="number" name="total" min="0" step="0.01" readonly></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Registrar Movimento</button>
+                    <button type="reset">Limpar Formulário</button>
+                    <button type="button">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Movimentos Recentes</h3>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Responsável</th>
+                        <th>Itens</th>
+                        <th>Valor Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MOV-001</td>
+                        <td>14/05/2025 08:30</td>
+                        <td>Entrada</td>
+                        <td>Maria Oliveira</td>
+                        <td>10</td>
+                        <td>R$ 1.250,00</td>
+                        <td>
+                            <a href="#">Ver</a> | 
+                            <a href="#">Imprimir</a> | 
+                            <a href="#">Reverter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MOV-002</td>
+                        <td>14/05/2025 09:15</td>
+                        <td>Saída</td>
+                        <td>João Silva</td>
+                        <td>3</td>
+                        <td>R$ 87,50</td>
+                        <td>
+                            <a href="#">Ver</a> | 
+                            <a href="#">Imprimir</a> | 
+                            <a href="#">Reverter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MOV-003</td>
+                        <td>13/05/2025 16:45</td>
+                        <td>Ajuste</td>
+                        <td>Ana Souza</td>
+                        <td>2</td>
+                        <td>R$ 45,00</td>
+                        <td>
+                            <a href="#">Ver</a> | 
+                            <a href="#">Imprimir</a> | 
+                            <a href="#">Reverter</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div>
+                <p>Página 1 de 10</p>
+                <a href="#">&lt;&lt; Anterior</a> | 
+                <a href="#">Próxima &gt;&gt;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer_cad">
+        <p>&copy; 2025 - Sistema de Estoque de Farmácia</p>
+        <address>
+            Contato: <a href="mailto:suporte@estoquefarma.com.br">suporte@estoquefarmasic.com.br</a>
+        </address>
+    </footer>
+    <script src="js/movimento.js"></script>
+</body>
+</html>

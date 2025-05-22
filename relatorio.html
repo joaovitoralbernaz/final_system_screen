@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/relatorio.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Repositório de Estoque - Sistema de Farmácia</title>
+</head>
+<body>
+    <header>
+        <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
+        <nav>
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="index.html">Cadastros</a>
+                <a href="movimento.html">Movimento</a>
+                <a href="relatorio.html">Relatório</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3>Filtrar Produtos</h3>
+            
+            <form action="#" method="get">
+                  <a href="index.html" class="back-btn">← Voltar</a>
+                <div>
+                    <label for="busca">Busca por Nome/Código:</label>
+                    <input type="text" id="busca" name="busca">
+                    
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">Todas</option>
+                        <option value="1">Antibióticos</option>
+                        <option value="2">Anti-inflamatórios</option>
+                        <option value="3">Analgésicos</option>
+                        <option value="4">Controlados</option>
+                        <option value="5">Vitaminas e Suplementos</option>
+                        <option value="6">Dermocosméticos</option>
+                    </select>
+                    
+                    <label for="fabricante">Fabricante:</label>
+                    <select id="fabricante" name="fabricante">
+                        <option value="">Todos</option>
+                        <option value="1">EMS</option>
+                        <option value="2">Medley</option>
+                        <option value="3">Neo Química</option>
+                        <option value="4">Eurofarma</option>
+                        <option value="5">Aché</option>
+                    </select>
+                    
+                    <label for="situacao">Situação:</label>
+                    <select id="situacao" name="situacao">
+                        <option value="">Todas</option>
+                        <option value="normal">Normal</option>
+                        <option value="baixo">Estoque Baixo</option>
+                        <option value="zerado">Estoque Zerado</option>
+                        <option value="vencido">Vencido</option>
+                        <option value="a_vencer">A vencer (30 dias)</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <button type="submit">Filtrar</button>
+                    <button type="reset">Limpar Filtros</button>
+                    <a href="#">Exportar Lista</a>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Repositório de Produtos</h3>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Princípio Ativo</th>
+                        <th>Categoria</th>
+                        <th>Fabricante</th>
+                        <th>Lote</th>
+                        <th>Fabricação</th>
+                        <th>Validade</th>
+                        <th>Estoque Atual</th>
+                        <th>Estoque Mínimo</th>
+                        <th>Situação</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MED001</td>
+                        <td>Paracetamol 500mg</td>
+                        <td>Paracetamol</td>
+                        <td>Analgésicos</td>
+                        <td>EMS</td>
+                        <td>LOT123456</td>
+                        <td>01/2024</td>
+                        <td>12/2026</td>
+                        <td>150</td>
+                        <td>30</td>
+                        <td>Normal</td>
+                        <td>
+                            <a href="$">Detalhes</a> | 
+                            <a href="$">Movimentar</a> | 
+                            <a href="$">Editar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MED002</td>
+                        <td>Dipirona 500mg</td>
+                        <td>Dipirona Sódica</td>
+                        <td>Analgésicos</td>
+                        <td>Medley</td>
+                        <td>LOT123457</td>
+                        <td>02/2024</td>
+                        <td>10/2025</td>
+                        <td>25</td>
+                        <td>30</td>
+                        <td>Estoque Baixo</td>
+                        <td>
+                            <a href="$">Detalhes</a> | 
+                            <a href="$">Movimentar</a> | 
+                            <a href="$">Editar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MED003</td>
+                        <td>Amoxicilina 500mg</td>
+                        <td>Amoxicilina</td>
+                        <td>Antibióticos</td>
+                        <td>Neo Química</td>
+                        <td>LOT123458</td>
+                        <td>03/2024</td>
+                        <td>06/2025</td>
+                        <td>0</td>
+                        <td>15</td>
+                        <td>Estoque Zerado</td>
+                        <td>
+                            <a href="$">Detalhes</a> | 
+                            <a href="$">Movimentar</a> | 
+                            <a href="$">Editar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MED004</td>
+                        <td>Omeprazol 20mg</td>
+                        <td>Omeprazol</td>
+                        <td>Antiulcerosos</td>
+                        <td>Eurofarma</td>
+                        <td>LOT123459</td>
+                        <td>04/2024</td>
+                        <td>06/2025</td>
+                        <td>80</td>
+                        <td>20</td>
+                        <td>A vencer</td>
+                        <td>
+                            <a href="$">Detalhes</a> | 
+                            <a href="$">Movimentar</a> | 
+                            <a href="$">Editar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MED005</td>
+                        <td>Losartana 50mg</td>
+                        <td>Losartana Potássica</td>
+                        <td>Anti-hipertensivos</td>
+                        <td>Aché</td>
+                        <td>LOT123450</td>
+                        <td>05/2024</td>
+                        <td>09/2026</td>
+                        <td>200</td>
+                        <td>50</td>
+                        <td>Normal</td>
+                        <td>
+                            <a href="$">Detalhes</a> | 
+                            <a href="$">Movimentar</a> | 
+                            <a href="$">Editar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div>
+                <p>Exibindo 5 de 250 produtos</p>
+                <p>Página 1 de 50</p>
+                <a href="#">&lt;&lt; Anterior</a> | 
+                <a href="#">Próxima &gt;&gt;</a>
+            </div>
+        </section>
+
+        <section>
+            <h3>Detalhes de Estoques por Lote</h3>
+            
+            <h4>Paracetamol 500mg - MED001</h4>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Lote</th>
+                        <th>Fabricação</th>
+                        <th>Validade</th>
+                        <th>Quantidade</th>
+                        <th>Local</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LOT123456</td>
+                        <td>01/2024</td>
+                        <td>12/2026</td>
+                        <td>100</td>
+                        <td>Prateleira A-15</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>LOT123457</td>
+                        <td>02/2024</td>
+                        <td>01/2027</td>
+                        <td>50</td>
+                        <td>Prateleira A-16</td>
+                        <td>Normal</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total:</strong></td>
+                        <td><strong>150</strong></td>
+                        <td colspan="2"></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+        </section>
+
+        <section>
+            <h3>Alertas de Estoque</h3>
+            
+            <ul>
+                <li>
+                    <strong>Estoque Baixo (5):</strong>
+                    <a href="%">Dipirona 500mg</a>,
+                    <a href="%">Ibuprofeno 600mg</a>,
+                    <a href="%">Cefalexina 500mg</a>,
+                    <a href="%">Metformina 850mg</a>,
+                    <a href="%">Simeticona 75mg</a>
+                </li>
+                <li>
+                    <strong>Estoque Zerado (3):</strong>
+                    <a href="%">Amoxicilina 500mg</a>,
+                    <a href="%">Atenolol 50mg</a>,
+                    <a href="%">Azitromicina 500mg</a>
+                </li>
+                <li>
+                    <strong>Vencidos (2):</strong>
+                    <a href="%">Xarope Guaco</a>,
+                    <a href="%">Vitamina C efervescente</a>
+                </li>
+                <li>
+                    <strong>A Vencer em 30 dias (4):</strong>
+                    <a href="%">Omeprazol 20mg</a>,
+                    <a href="%">Sulfato Ferroso</a>,
+                    <a href="%">Dexametasona creme</a>,
+                    <a href="%">Soro fisiológico 500ml</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Cadastro Rápido de Produto</h3>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Novo Produto</legend>
+                    
+                    <div>
+                        <label for="codigo">Código:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                    </div>
+                    
+                    <div>
+                        <label for="nome_produto">Nome:</label>
+                        <input type="text" id="nome_produto" name="nome_produto" required>
+                    </div>
+                    
+                    <div>
+                        <label for="principio_ativo">Princípio Ativo:</label>
+                        <input type="text" id="principio_ativo" name="principio_ativo" required>
+                    </div>
+                    
+                    <div>
+                        <label for="categoria_produto">Categoria:</label>
+                        <select id="categoria_produto" name="categoria_produto" required>
+                            <option value="">Selecione</option>
+                            <option value="1">Antibióticos</option>
+                            <option value="2">Anti-inflamatórios</option>
+                            <option value="3">Analgésicos</option>
+                            <option value="4">Controlados de tarja preta</option>
+                            <option value="5">Vitaminas e Suplementos</option>
+                            <option value="6">Dermocosméticos</option>
+                            <option value="7">Genérico</option>
+                            <option value="8">Manipulado</option>
+                            <option value="9">Antialérgicos</option>
+                            <option value="10">Industrializado</option>
+                            <option value="11">Fitoterápico</option>
+                            <option value="12">Importado</option>
+                            <option value="13">Nacional</option>
+                            <option value="14">Tarja vermelha</option>
+                            <option value="15">Sob prescrição</option>
+                            <option value="16">Isentos de prescrição (MIPs)</option>
+                            <option value="17">Sintéticos</option>
+                            <option value="18">Semissintéticos</option>
+                            <option value="19">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="fabricante_produto">Fabricante:</label>
+                        <select id="fabricante_produto" name="fabricante_produto" required>
+                            <option value="">Selecione</option>
+                            <option value="1">EMS</option>
+                            <option value="2">Medley</option>
+                            <option value="3">Neo Química</option>
+                            <option value="4">Eurofarma</option>
+                            <option value="5">Aché</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="lote_produto">Lote:</label>
+                        <input type="text" id="lote_produto" name="lote_produto" required>
+                    </div>
+
+                    <div>
+                        <label for="validade_produto">Fabricação:</label>
+                        <input type="datetime-local" id="data_validade" name="data_validade" required>
+                    </div>
+
+                    <div>
+                        <label for="validade_produto">Validade:</label>
+                        <input type="datetime-local" id="data_validade" name="data_validade" required>
+                    </div>
+                    
+                    <div>
+                        <label for="estoque_minimo">Estoque Atual:</label>
+                        <input type="number" id="estoque_atual" name="estoque_atual" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="estoque_minimo">Estoque Mínimo:</label>
+                        <input type="number" id="estoque_minimo" name="estoque_minimo" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="situacao">Situação:</label>
+                        <select id="situacao" name="situacao">
+                            <option value="">Selecione</option>
+                            <option value="normal">Normal</option>
+                            <option value="baixo">Estoque Baixo</option>
+                            <option value="zerado">Estoque Zerado</option>
+                            <option value="vencido">Vencido</option>
+                            <option value="a_vencer">A vencer (30 dias)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <button type="submit">Cadastrar Produto</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Sistema de Estoque de Farmácia</p>
+        <address>
+            Contato: <a href="mailto:suporte@estoquefarma.com.br">suporte@estoquefarmasic.com.br</a>
+        </address>
+    </footer>
+    <script src="js/relatorio.js"></script>
+</body>
+</html>

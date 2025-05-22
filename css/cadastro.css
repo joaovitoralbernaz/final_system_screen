@@ -1,0 +1,418 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #363534;
+    color: white;
+}
+
+.MainLogo {
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.main-content {
+    width: 100%;
+}
+
+/* Título da página */
+.page-title {
+    color: #FC2C2C;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* Botão Voltar */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #c9c7c785;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #FC2C2C;
+    color: white;
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FC2C2C;
+    box-shadow: 0 0 0 2px rgba(252, 44, 44, 0.1);
+}
+
+/* Botões do formulário */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: #FC2C2C;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e02525;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Container de busca */
+.search-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.search-container form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #FC2C2C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e02525;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #FC2C2C;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botões de ação na tabela */
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.footer_cad {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #363534;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer_cad p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer_cad address {
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.footer_cad a {
+    color: #FC2C2C;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer_cad a:hover {
+    color: #ff5555;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .MainLogo {
+        width: 100px;
+        height: 100px;
+        margin-left: 0;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .search-container form {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edit-btn, .delete-btn {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.3rem;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+}

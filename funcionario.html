@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Cadastro de Funcionário - Sistema de Estoque Farmácia</title>
+</head>
+<body>
+    <header>
+        <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
+        <nav>
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="index.html">Cadastros</a>
+                <a href="movimento.html">Movimento</a>
+                <a href="relatorio.html">Relatório</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <a href="index.html" class="back-btn">← Voltar</a>
+                <h1 class="page-title">Cadastro de funiconarios</h1>
+                
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="funiconario-nome">Nome Completo</label>
+                            <input type="text" id="funiconario-nome" name="funiconario-nome" placeholder="Digite o nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funiconario-cpf">CPF</label>
+                            <input type="text" id="funiconario-cpf" name="funiconario-cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funiconario-telefone">Telefone</label>
+                            <input type="text" id="funiconario-telefone" name="funiconario-telefone" placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="funiconario-email">E-mail</label>
+                            <input type="email" id="funiconario-email" name="funiconario-email" placeholder="exemplo@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="funiconario-endereco">Endereço</label>
+                            <input type="text" id="funiconario-endereco" name="funiconario-endereco" placeholder="Rua, número, bairro">
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="reset" class="btn btn-secondary">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="search-container">
+                    <form action="#" method="get">
+                        <input type="text" id="buscar-funiconario" name="buscar-funiconario" class="search-input" placeholder="Buscar funiconario...">
+                        <button type="submit" class="search-btn">Buscar</button>
+                    </form>
+                </div>
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Maria Silva</td>
+                            <td>123.456.789-00</td>
+                            <td>(11) 99999-8888</td>
+                            <td>maria@email.com</td>
+                            <td class="action-btns">
+                                <a href="#" class="edit-btn">Editar</a>
+                                <a href="#" class="delete-btn">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>João Santos</td>
+                            <td>987.654.321-00</td>
+                            <td>(11) 99999-7777</td>
+                            <td>joao@email.com</td>
+                            <td class="action-btns">
+                                <a href="#" class="edit-btn">Editar</a>
+                                <a href="#" class="delete-btn">Excluir</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="footer_cad">
+        <p>&copy; 2025 - Sistema de Estoque de Farmácia</p>
+        <address>
+            Contato: <a href="mailto:suporte@estoquefarma.com.br">suporte@estoquefarmasic.com.br</a>
+        </address>
+    </footer> 
+
+    <script src="js/funcionario.js"></script>
+</body>
+</html>
