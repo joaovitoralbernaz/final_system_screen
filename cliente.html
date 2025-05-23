@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Cadastro de Clientes - Sistema de Estoque de Farmácia</title>
-    <link rel="stylesheet" href="css/cadastro.css">
+   <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
+    <div class="nav-overlay" id="navOverlay"></div>
+    
     <header>
         <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
         <nav>
-            <div class="logo"></div>
-            <div class="nav-links">
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Início</a>
                 <a href="index.html">Cadastros</a>
                 <a href="movimento.html">Movimento</a>
@@ -110,7 +116,9 @@
         <address>
             Contato: <a href="mailto:suporte@estoquefarma.com.br">suporte@estoquefarmasic.com.br</a>
         </address>
-    </footer> 
+    </footer>
     <script src="js/cliente.js"></script>
+
+
 </body>
 </html>
