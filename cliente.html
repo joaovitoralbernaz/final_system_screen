@@ -51,10 +51,78 @@
                             <label for="cliente-email">E-mail</label>
                             <input type="email" id="cliente-email" name="cliente-email" placeholder="exemplo@email.com">
                         </div>
-                        <div class="form-group">
-                            <label for="cliente-endereco">Endereço</label>
-                            <input type="text" id="cliente-endereco" name="cliente-endereco" placeholder="Rua, número, bairro">
-                        </div>
+                        
+                        <!-- Seção de Endereço -->
+                        <fieldset class="endereco-section">
+                            <legend>Endereço</legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group form-group-small">
+                                    <label for="cliente-cep">CEP</label>
+                                    <input type="text" id="cliente-cep" name="cliente-cep" placeholder="00000-000">
+                                </div>
+                                <div class="form-group form-group-large">
+                                    <label for="cliente-logradouro">Logradouro</label>
+                                    <input type="text" id="cliente-logradouro" name="cliente-logradouro" placeholder="Rua, Avenida, etc.">
+                                </div>
+                                <div class="form-group form-group-small">
+                                    <label for="cliente-numero">Número</label>
+                                    <input type="text" id="cliente-numero" name="cliente-numero" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cliente-complemento">Complemento</label>
+                                    <input type="text" id="cliente-complemento" name="cliente-complemento" placeholder="Apto, Bloco, etc. (opcional)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cliente-bairro">Bairro</label>
+                                    <input type="text" id="cliente-bairro" name="cliente-bairro" placeholder="Nome do bairro">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cliente-cidade">Cidade</label>
+                                    <input type="text" id="cliente-cidade" name="cliente-cidade" placeholder="Nome da cidade">
+                                </div>
+                                <div class="form-group form-group-small">
+                                    <label for="cliente-estado">Estado</label>
+                                    <select id="cliente-estado" name="cliente-estado">
+                                        <option value="">Selecione</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
                         <div class="btn-group">
                             <button type="submit" class="btn btn-primary">Salvar</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
@@ -78,6 +146,7 @@
                                 <th>CPF</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
+                                <th>Cidade/UF</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -88,6 +157,7 @@
                                 <td data-label="CPF">123.456.789-00</td>
                                 <td data-label="Telefone">(11) 99999-8888</td>
                                 <td data-label="Email">maria@email.com</td>
+                                <td data-label="Cidade/UF">São Paulo/SP</td>
                                 <td data-label="Ações" class="action-btns">
                                     <a href="#" class="edit-btn">Editar</a>
                                     <a href="#" class="delete-btn">Excluir</a>
@@ -99,6 +169,7 @@
                                 <td data-label="CPF">987.654.321-00</td>
                                 <td data-label="Telefone">(11) 99999-7777</td>
                                 <td data-label="Email">joao@email.com</td>
+                                <td data-label="Cidade/UF">Rio de Janeiro/RJ</td>
                                 <td data-label="Ações" class="action-btns">
                                     <a href="#" class="edit-btn">Editar</a>
                                     <a href="#" class="delete-btn">Excluir</a>
@@ -119,6 +190,9 @@
     </footer>
     <script src="js/cliente.js"></script>
 
+    <style>
+     
+    </style>
 
 </body>
 </html>

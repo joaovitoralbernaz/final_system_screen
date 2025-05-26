@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
+    <div class="nav-overlay" id="navOverlay"></div>
+    
     <header>
         <img src="img/logomain.png" alt="MainLogo" class="MainLogo">
         <nav>
@@ -49,14 +51,105 @@
                             <label for="fornecedor-email">E-mail</label>
                             <input type="email" id="fornecedor-email" name="fornecedor-email" placeholder="empresa@email.com">
                         </div>
-                        <div class="form-group">
-                            <label for="fornecedor-endereco">Endereço</label>
-                            <input type="text" id="fornecedor-endereco" name="fornecedor-endereco" placeholder="Rua, número, bairro">
-                        </div>
-                        <div class="form-group">
-                            <label for="fornecedor-contato">Nome do Contato</label>
-                            <input type="text" id="fornecedor-contato" name="fornecedor-contato" placeholder="Nome do representante">
-                        </div>
+                        
+                        <!-- Seção de Endereço -->
+                        <fieldset class="endereco-section">
+                            <legend>Endereço da Empresa</legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group form-group-small">
+                                    <label for="fornecedor-cep">CEP</label>
+                                    <input type="text" id="fornecedor-cep" name="fornecedor-cep" placeholder="00000-000">
+                                </div>
+                                <div class="form-group form-group-large">
+                                    <label for="fornecedor-logradouro">Logradouro</label>
+                                    <input type="text" id="fornecedor-logradouro" name="fornecedor-logradouro" placeholder="Rua, Avenida, etc.">
+                                </div>
+                                <div class="form-group form-group-small">
+                                    <label for="fornecedor-numero">Número</label>
+                                    <input type="text" id="fornecedor-numero" name="fornecedor-numero" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fornecedor-complemento">Complemento</label>
+                                    <input type="text" id="fornecedor-complemento" name="fornecedor-complemento" placeholder="Sala, Andar, etc. (opcional)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fornecedor-bairro">Bairro</label>
+                                    <input type="text" id="fornecedor-bairro" name="fornecedor-bairro" placeholder="Nome do bairro">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fornecedor-cidade">Cidade</label>
+                                    <input type="text" id="fornecedor-cidade" name="fornecedor-cidade" placeholder="Nome da cidade">
+                                </div>
+                                <div class="form-group form-group-small">
+                                    <label for="fornecedor-estado">Estado</label>
+                                    <select id="fornecedor-estado" name="fornecedor-estado">
+                                        <option value="">Selecione</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Seção de Contato -->
+                        <fieldset class="contato-section">
+                            <legend>Dados do Contato</legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fornecedor-contato-nome">Nome do Contato</label>
+                                    <input type="text" id="fornecedor-contato-nome" name="fornecedor-contato-nome" placeholder="Nome do representante">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fornecedor-contato-cargo">Cargo</label>
+                                    <input type="text" id="fornecedor-contato-cargo" name="fornecedor-contato-cargo" placeholder="Gerente, Vendedor, etc.">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fornecedor-contato-telefone">Telefone do Contato</label>
+                                    <input type="text" id="fornecedor-contato-telefone" name="fornecedor-contato-telefone" placeholder="(00) 00000-0000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fornecedor-contato-email">E-mail do Contato</label>
+                                    <input type="email" id="fornecedor-contato-email" name="fornecedor-contato-email" placeholder="contato@email.com">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
                         <div class="btn-group">
                             <button type="submit" class="btn btn-primary">Salvar</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
@@ -80,6 +173,7 @@
                                 <th>CNPJ</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
+                                <th>Cidade/UF</th>
                                 <th>Contato</th>
                                 <th>Ações</th>
                             </tr>
@@ -91,6 +185,7 @@
                                 <td data-label="CNPJ">12.345.678/0001-90</td>
                                 <td data-label="Telefone">(11) 3333-4444</td>
                                 <td data-label="Email">contato@medfarma.com</td>
+                                <td data-label="Cidade/UF">São Paulo/SP</td>
                                 <td data-label="Contato">Carlos Silva</td>
                                 <td data-label="Ações" class="action-btns">
                                     <a href="#" class="edit-btn">Editar</a>
@@ -103,6 +198,7 @@
                                 <td data-label="CNPJ">98.765.432/0001-10</td>
                                 <td data-label="Telefone">(11) 4444-5555</td>
                                 <td data-label="Email">contato@pharmasupply.com</td>
+                                <td data-label="Cidade/UF">Rio de Janeiro/RJ</td>
                                 <td data-label="Contato">Ana Oliveira</td>
                                 <td data-label="Ações" class="action-btns">
                                     <a href="#" class="edit-btn">Editar</a>
@@ -121,7 +217,10 @@
         <address>
             Contato: <a href="mailto:suporte@estoquefarma.com.br">suporte@estoquefarmasic.com.br</a>
         </address>
-    </footer> 
+    </footer>
+    
     <script src="js/fornecedor.js"></script>
+
 </body>
 </html>
+
