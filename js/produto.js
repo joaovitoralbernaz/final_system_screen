@@ -114,6 +114,7 @@ function salvarProduto(e) {
     const estoque = parseInt(document.getElementById('produto-estoque').value);
     const preco = parseFloat(document.getElementById('produto-preco').value);
     const fornecedor = document.getElementById('produto-fornecedor').value;
+    const descricao = document.getElementById('produto-descricao').value;
 
     // Validação básica
     if (!nome || !categoria || isNaN(estoque) || isNaN(preco) || !fornecedor) {
@@ -132,6 +133,7 @@ function salvarProduto(e) {
             produtos[index].estoque = estoque;
             produtos[index].preco = preco;
             produtos[index].fornecedor = fornecedor;
+            produtos[index].descricao = descricao;
         }
         produtoEditando = null;
     } else {
@@ -144,7 +146,8 @@ function salvarProduto(e) {
             categoria,
             estoque,
             preco,
-            fornecedor
+            fornecedor,
+            descricao
         });
     }
 
@@ -171,6 +174,7 @@ function editarProduto(id) {
     document.getElementById('produto-estoque').value = produto.estoque;
     document.getElementById('produto-preco').value = produto.preco;
     document.getElementById('produto-fornecedor').value = produto.fornecedor;
+    document.getElementById('produto-descricao').value = produto.descricao;
 
     // Marcar como editando
     produtoEditando = id;
