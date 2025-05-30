@@ -19,7 +19,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #363534;
+    background-color: #1f1f1f;
+    box-shadow: 0 6px 12px #bb00005b;
     color: white;
     position: relative;
 }
@@ -48,7 +49,7 @@ header {
 .hamburger-menu span {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -75,7 +76,7 @@ header {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem;
@@ -141,13 +142,13 @@ main {
     border: none;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: lighter;
-    cursor: pointer;
+    
     transition: background-color 0.3s;
 }
 
+
 .back-btn:hover {
-    background-color: #FC2C2C;
+    background-color: #a5a5a5e8;
     color: white;
 }
 
@@ -227,7 +228,7 @@ main {
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #0091ff;
 }
 
 /* Container de busca */
@@ -445,7 +446,7 @@ tbody tr:last-child td {
     }
 
     .nav-links a:hover {
-        background-color: rgba(252, 44, 44, 0.2);
+        background-color: rgba(130, 130, 130, 0.2);
         padding-left: 10px;
     }
 
